@@ -1,0 +1,64 @@
+This repo contains a mirror of Skeinforge 41 (which can also be downloaded from http://fabmetheus.crsndoo.com/)
+
+Also included, in the ".skeinforge" folder:
+- two printing profiles for Durbie RepRap Prusa Mendel printers: "Durbie-Normal" and "Durbie-Fine" ("Durbie-Fine" is an experimental profile)
+- replace.csv for Durbie RepRap Prusa Mendel printers
+- sample end.gcode for Durbie RepRap Prusa Mendel printers
+____________________________________________________________________________
+
+INSTRUCTIONS
+
+1) We recommend kliment's printrun host controller software.
+
+Download kliment's printrun here:
+zip file: https://github.com/kliment/Printrun/zipball/master
+tar.gz: https://github.com/kliment/Printrun/tarball/master
+
+Read this for information on printrun and installing dependencies for your particular operating system:
+https://github.com/kliment/Printrun/blob/master/README.md
+
+Once downloaded, extract the folder to a suitable location (eg. Desktop)
+
+2) Download romscraj/skeinforge41:
+zip file: https://github.com/romscraj/skeinforge41/zipball/master
+tar.gz: https://github.com/romscraj/skeinforge41/tarball/master
+
+Once downloaded, extract the folder to a suitable location (eg. Desktop).
+
+3) Copy the "skeinforge" folder you have extracted in Step 2 and paste it into the printrun folder extracted from Step 1
+
+4) Copy the ".skeinforge" folder you have extracted in Step 2 and paste it into your user directory.
+Example: C:\Users\iDiot , where iDiot is your username.
+
+5) Power up your Durbie and connect the USB cable to your computer. Identify the port that your printer is connected to (eg. from Device Manager)
+
+6) Run pronterface.py from inside the printrun folder extracted from Step 1.
+
+7) From the pull down menus in pronterface, select/enter the following:
+- COMXX where XX is the port that your printer is connected to
+- 250000 baud rate
+- XY: 5000 mm/min
+- Z: 120 mm/min
+- Heater: temperature to be set based the feedstock that you use, and partly the thermistor that you are using on your extruder as well. Try between 175°C - 195°C for PLA, typically 185°C
+- Bed: For Durbie printers supplied with a printbed and SMD thermistor, set this to 65°C for printing PLA
+- Filament extrusion: 3mm and 100mm/min (can be changed but use these settings for a start)
+
+8) Click the Connect button in pronterface. Pronterface should connect to your Durbie if all is fine - once connected, you will see "Printer is online" in the status bar (at the bottom left corner)
+
+9) From menu bar, click "Settings>Slicing Settings". If you have copied the ".skeinforge" folder into your User folder correctly, the "Skeinforge Settings" control panel will pop up.
+
+10) Select "Profile Type" as "Extrusion" and "Profile Selection" as "Durbie-Normal" for a start. Close the "Skeinforge Settings" control panel.
+
+11) Click "Load File" button in pronterface and open "test-print.stl" from the folder you have extracted in Step 2. Pronterface + skeinforge will start to slice (skein) the model.
+
+12) Once slicing is done, you can start your test print by clicking on the "Print" button. Be sure that the the extruder and printbed have reached their set temperatures and you have loaded enough feedstock (filament) for the print before you start printing.
+
+13) After printing has completed, you should end up with a cube measuring 20mm x 20mm x 20mm and a mini mug measuring 20mm tall and 20mm in diameter. The two objects should have been printed 20mm apart from each other.
+- Check that there is very minor or no 'stringing' between the two objects.
+- Check that the sides of the cube are not slanted/distorted and the top and bottom are flat. Also verify the dimensions of the cube.
+- Check the mini mug for water tightness by pouring in water - it should not leak (wait at least 5 mins). Also verify the dimensions of the cube.
+- Note that the objects are not edible.
+
+14) If the print did not turn out well, check your printer assembly and/or temperature settings in pronterface. Once you are able to print the test print succesfully, you can move on to print other objects and change the skeinforge settings to your liking - a very good comprehensive guide can be found here: http://fabmetheus.crsndoo.com/wiki/index.php/Skeinforge as well as on the web in forums and helpful user blogs who share a lot of good stuff with other people.
+
+15) Enjoy printing!
