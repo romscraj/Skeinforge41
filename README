@@ -40,7 +40,7 @@ Example: C:\Users\iDiot , where iDiot is your username.
 - XY: 5000 mm/min
 - Z: 120 mm/min
 - Heater: temperature to be set based the feedstock that you use, and partly the thermistor that you are using on your extruder as well. Try between 175°C - 195°C for PLA, typically 185°C
-- Bed: For Durbie printers supplied with a printbed and SMD thermistor, set this to 65°C for printing PLA
+- Bed: For Durbie printers supplied with a printbed and SMD thermistor, set this to 65°C for printing PLA. for small parts (less than 20mm x & y) (e.g. the test-print), it is recommended that you use about 40°C else the object will lift off after a while.
 - Filament extrusion: 3mm and 100mm/min (can be changed but use these settings for a start)
 
 8) Click the Connect button in pronterface. Pronterface should connect to your Durbie if all is fine - once connected, you will see "Printer is online" in the status bar (at the bottom left corner)
